@@ -2,9 +2,8 @@ const prompt = require("prompt-sync")()
 
 const getInfo = () => {
     let velo = prompt("Em qual velocidade voce estava? ")
-    return{ 
-        velocidade : velo
-    }
+    return velo
+
 }
 
 const calcMuta = (velocidade) => {
@@ -20,9 +19,8 @@ const calcMuta = (velocidade) => {
 
 const main = () =>{
     let infos = getInfo()
-    let ultapassagem = infos.velocidade
-    let resultado = calcMuta(ultapassagem)
-    console.log(`Você ultapassou o limite de velocidade por ${ultapassagem - 60}km/hr o preço da multa é ${resultado}R$`)
+    let resultado = calcMuta(infos)
+    console.log(`Você ultapassou o limite de velocidade por ${infos - 60}km/hr o preço da multa é ${resultado}R$`)
 }
 
 main()

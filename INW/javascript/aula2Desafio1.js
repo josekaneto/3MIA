@@ -2,10 +2,8 @@ const prompt = require("prompt-sync")()
 
 const getInfos = () => {
     let books = prompt("Digite quantos livros quer: ")
-    return{
-        livros: books
-    }
-    
+    return books
+
 }
 
 const calcBooks = (quantBooks) => {
@@ -21,9 +19,8 @@ const calcBooks = (quantBooks) => {
 }
 const main = () => {
     let infos = getInfos()
-    let books = infos.livros
-    let resultado = calcBooks(books)
-    console.log(`Você escolheu ${books} livros, o preço deles é  ${resultado}`)
+    let resultado = calcBooks(infos)
+    console.log(`Você escolheu ${infos} livros, o preço deles é  ${resultado}`)
 }
 main()
 
