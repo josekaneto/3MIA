@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br>
+    <ion-input [(ngModel)]="lado1" label="Digite o primeiro lado do triângulo" label-placement="floating" fill="outline" placeholder=""></ion-input>
+  <br>
+
+  <br>
+  <ion-input [(ngModel)]="lado2" label="Digite o segundo lado do triângulo  " label-placement="floating" fill="outline" placeholder=""></ion-input>
+  <br>
+
+  <br>
+  <ion-input [(ngModel)]="lado3" label="Digite o terceiro lado do triângulo" label-placement="floating" fill="outline" placeholder=""></ion-input>
+  <br>
+
+
+  <ion-button (click)="calcularTri()" color="medium">Calcular Triângulo</ion-button>
+  <br>
+
+  <ion-label>{{Mensagem}}</ion-label>
+
+</ion-content>

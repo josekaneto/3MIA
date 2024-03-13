@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-input [(ngModel)]="valor" label="Temperatura" label-placement="floating" fill="outline" placeholder="Digite a Temperatura que deseja converter"></ion-input>
+
+
+  <br>
+    <ion-button (click)="calcularCelcius()" color="light">Celsius para Fahrenheit </ion-button>
+    <ion-button (click)="calcularFah()" color="medium">Fahrenheit para Celsius</ion-button>
+<br>
+    <ion-label>{{res}}</ion-label>
+</ion-content>
