@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input [(ngModel)]="km" label="Quilometragem" labelPlacement="floating" placeholder="Digite a quilometragem"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="preco" label="Preço" labelPlacement="floating" placeholder="Digite o preço do combustível"></ion-input>
+  </ion-item>
+
+    <ion-radio-group [(ngModel)]="radioselecionada">
+      <ion-list-header>Escolha um tipo de combustível: </ion-list-header>
+      <ion-item>
+        <ion-label>Etanol</ion-label>
+        <ion-radio value="Etanol"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Gasolina</ion-label>
+        <ion-radio value="Gasolina"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Diesel</ion-label>
+        <ion-radio value="Diesel"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+    <ion-button (click)="Calcular()"  expand="block">Calcular preço </ion-button>
+</ion-content>
