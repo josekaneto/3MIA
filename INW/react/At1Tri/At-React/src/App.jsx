@@ -1,12 +1,12 @@
 import Header from './Componentes/Header/Header'
-import Main from './Componentes/Main/Main'
+import {Outlet} from 'react-router-dom'
 
 function App() {
 
   return (
     <>
       <Header/>
-      <Main/>
+      <Outlet/>
     </>
   )
 }

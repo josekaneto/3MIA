@@ -1,5 +1,5 @@
-import Imagem from "../ImgHome/ImgHome";
-import TextoHome from "../TextoHome/TextoHome";
+import TextoHome from '../TextoHome/TextoHome'
+import Imagem from '../ImgHome/ImgHome'
 
 export default function Main(){
     return(
