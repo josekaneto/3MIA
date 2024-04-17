@@ -1,11 +1,18 @@
 import TextoHome from '../TextoHome/TextoHome'
 import Imagem from '../ImgHome/ImgHome'
+import Cards from '../Cards/Cards'
 
 export default function Main(){
     return(
         <>
-            <TextoHome/>
-            <Imagem/>
+        <section className='section'>
+            <div className="div-section">
+                <TextoHome/>
+                <Imagem/>
+            </div>
+        </section>
+
+            <Cards/>
         </>
     )
 }

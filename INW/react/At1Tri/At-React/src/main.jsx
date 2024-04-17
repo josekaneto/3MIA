@@ -4,8 +4,8 @@ import App from './App.jsx'
 import './index.css'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Main from './Componentes/Main/Main.jsx'
-// import Sobre from './Pages/Sobre.jsx'
-// import Contato from './Pages/Contato.jsx'
+import Sobre from './Pages/Sobre.jsx'
+  import Contato from './Pages/Contato.jsx'
 
 const router = createBrowserRouter([
   {
@@ -13,8 +13,8 @@ const router = createBrowserRouter([
     element: <App/>,
     children:[
       {index: true, element: <Main/>},
-      // {path: '/sobre', element: <Sobre/>},
-      // {path: '/contato', element: <Contato/>}
+      {path: '/sobre', element: <Sobre/>},
+      {path: '/contato', element: <Contato/>}
     ]
   }
 ])

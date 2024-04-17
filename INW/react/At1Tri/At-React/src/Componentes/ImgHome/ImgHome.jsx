@@ -1,4 +1,4 @@
-import ImgHome from "../../../public/Hero image.png"
+import ImgHome from "../../../public/HeroImage.png"
 
 export default function Imagem(){
     return (
