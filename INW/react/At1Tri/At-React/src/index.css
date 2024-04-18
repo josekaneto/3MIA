@@ -13,6 +13,8 @@
 header{
     width: 100%;
     height: 5vw;
+    display: flex;
+    justify-content: center;
 }   
 
 header nav ul{
@@ -31,6 +33,8 @@ header nav ul{
     font-size: 22px;
 }
 
+/* tela home e sobre */
+
 .section{
     width: 100%;
     display: flex;
@@ -41,7 +45,7 @@ header nav ul{
 .div-section{
     width: 90%;
     display: flex;
-
+    flex-direction: row;
 }
 
 .titulo{
@@ -64,6 +68,8 @@ header nav ul{
 
 }
 
+/* Cards */
+
 .cards-section{
     width: 100%;
 
@@ -84,21 +90,21 @@ header nav ul{
 .card2{
     width: 30%;
     height: 300px;
-    background-color: #F1C2B0;
+    background-color: #F9EB98;
     border-radius: 16px;
     margin: 0 20px;
 }
 .card3{
     width: 30%;
     height: 300px;
-    background-color: #F1C2B0;
+    background-color: #C0D9DD;
     border-radius: 16px;
     margin: 0 20px;
 }
 .card4{
     width: 30%;
     height: 300px;
-    background-color: #F1C2B0;
+    background-color: #6975E8;
     border-radius: 16px;
     margin: 0 20px;    
 }
@@ -107,7 +113,7 @@ header nav ul{
 .numero-logo{
     width: 80%;
     display: flex;
-    padding: 10%;
+    padding: 5% 10%;
     justify-content: space-between;
 }
 
@@ -118,5 +124,30 @@ header nav ul{
 .imagem{
     width: 32px;
     height: 32px;
+}
+
+.cards-section h3{
+    padding: 0 10%;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.texto-cards{
+    padding: 5% 10%;
+    font-size: 16px;
+}
+
+
+/* tela Sobre */
+
+.div-section-sobre{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.div-img{
+    display: flex;
 }
 
