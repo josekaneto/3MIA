@@ -5,13 +5,12 @@ import Cards from '../Cards/Cards'
 export default function Main(){
     return(
         <>
-        <section className='section'>
-            <div className="div-section">
+        <section className='section-home'>
+            <div className="div-section-home">
                 <TextoHome/>
                 <Imagem/>
             </div>
         </section>
-
             <Cards/>
         </>
     )

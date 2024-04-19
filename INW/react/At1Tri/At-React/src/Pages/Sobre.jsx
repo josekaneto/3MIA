@@ -1,17 +1,21 @@
+import ImgSobre from "../Componentes/ImgSobre/ImgSobre";
+import Planos from "../Componentes/Planos/Planos";
+import TextoSobre from "../Componentes/TextoSobre/TextoSobre";
+
 export default function Sobre(){
     return(
-        <section className="section">
-            <div className="div-section-sobre">
-                <div className="div-textos">
-                    <h1 className="titulo">Crie seus vídeos online</h1>
-                    <p className="texto">Transforme suas ideias em filmes memoráveis: onde a criatividade encontra a simplicidade.</p>
-                    <button className="botao" type="button">Começar agora!</button>
+        <>
+            <section className="section-sobre">
+                <div className="texto-img-sobre">
+                    <div className="div-texto-sobre">
+                        <TextoSobre/>
+                    </div>
+                    <div className="img-sobre">
+                        <ImgSobre/>
+                    </div>
                 </div>
-                <div className="div-img">
-                    <img className="img-sobre" src="../../public/celular1.png" alt="" />
-                    <img className="img-sobre" src="../../public/celular2.png" alt="" />
-                </div>
-            </div>
-        </section>
+            </section>
+            <Planos/>
+        </>
     )
 }
