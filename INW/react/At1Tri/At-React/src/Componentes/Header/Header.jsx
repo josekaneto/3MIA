@@ -1,13 +1,13 @@
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 export default function Header(){
     return(
         <header>
             <nav>
                 <ul>
-                    <li><Link className='links-header' to='/'>Home</Link> </li>
-                    <li><Link className='links-header' to='/sobre'>Sobre</Link></li>
-                    <li><Link className='links-header' to='/contato'>Contato</Link></li>
+                    <li> <NavLink className='links-header' to='/'>Home</NavLink> </li>
+                    <li> <NavLink className='links-header' to='/sobre'>Sobre</NavLink></li>
+                    <li> <NavLink className='links-header' to='/contato'>Contato</NavLink></li>
                 </ul>
             </nav>
         </header>
