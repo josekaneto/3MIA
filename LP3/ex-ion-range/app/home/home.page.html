@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+
+    <ion-item>
+      <ion-input [(ngModel)]="valorConta" label="Floating label" labelPlacement="floating" placeholder="Enter text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-range (ionChange)="onIonChange($event)" [min]="0" [max]="30"></ion-range>
+      <ion-label>{{valorRange}}%</ion-label>
+    </ion-item>
+    <ion-button (click)="contaGorjeta()">Cacular nota e gorjeta</ion-button>
+
+
+
+  </div>
+</ion-content>
