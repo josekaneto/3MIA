@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Conversor de Unidades de Medida </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label>Valor a ser convertido: {{ valorEntrada }}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-range
+      min="0"
+      max="100"
+      step="1"
+      [(ngModel)]="valorEntrada"
+    ></ion-range>
+  </ion-item>
+  <ion-item>
+    <ion-label>Unidade de Medida de Entrada:</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-radio-group [(ngModel)]="unidadeEntrada">
+      <ion-item>
+        <ion-label>Quilômetros</ion-label>
+        <ion-radio value="km"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Metros</ion-label>
+        <ion-radio value="m"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-item>
+  <ion-item>
+    <ion-label>Unidade de Medida de Saída:</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-radio-group [(ngModel)]="unidadeSaida">
+      <ion-item>
+        <ion-label>Milhas</ion-label>
+        <ion-radio value="mi"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Pés</ion-label>
+        <ion-radio value="ft"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-item>
+  <ion-button expand="block" (click)="converterUnidades()"
+    >Converter</ion-button
+  >
+  <ion-item>
+    <ion-label>Valor Convertido: {{ valorSaida }}</ion-label>
+  </ion-item>
+</ion-content>
