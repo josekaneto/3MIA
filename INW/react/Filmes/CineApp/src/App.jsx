@@ -1,11 +1,13 @@
+import { Outlet } from "react-router-dom"
+import Header from "./Componentes/Header/Header"
 
 
 function App() {
 
   return (
     <>
-      <h1>CineApp</h1>
-      
+      <Header/>
+      <Outlet/>
     </>
   )
 }
