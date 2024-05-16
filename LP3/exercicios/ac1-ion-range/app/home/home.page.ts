@@ -15,14 +15,14 @@ export class HomePage {
     valorEmprestimo = 0
     jurosMensal = 0
     meses = 0
-    valor = 0
-    mensal = 0
-    valorTotal = 0
+    valor = ''
+    mensal = ''
+    valorTotal = ''
 
   calcularEmprestimo(){
-    this.valor = this.valorEmprestimo * (this.jurosMensal/100) * this.meses
-    this.mensal = this.valor / this.meses
-    this.valorTotal = (this.jurosMensal * this.meses) + this.valorEmprestimo
+    this.valor = (this.valorEmprestimo * (this.jurosMensal/100) * this.meses).toFixed(2)
+    this.mensal = (parseFloat(this.valor) / this.meses).toFixed(2)
+    this.valorTotal = ((this.jurosMensal * this.meses) + this.valorEmprestimo).toFixed(2)
   }
 
 }
