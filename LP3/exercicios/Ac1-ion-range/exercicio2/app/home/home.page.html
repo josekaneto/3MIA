@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      E-commerce 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-input label="Digite o preço do produto" labelPlacement="floating" fill="outline" placeholder="Digite aqui" [(ngModel)]="produto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Escolha a porcentagem de desconto que deseja: {{porcentagem}}%</ion-label>
+  </ion-item>
+
+  <ion-item >
+    <ion-range min="0" max="100" (onIonChange)="calcularPorcentagem()" [(ngModel)]="porcentagem"></ion-range>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>O preço total do produto é : {{calcularPorcentagem()}}</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>O desconto aplicado ao produto é : {{precoDesconto}}</ion-label>
+  </ion-item>
+
+
+</ion-content>
