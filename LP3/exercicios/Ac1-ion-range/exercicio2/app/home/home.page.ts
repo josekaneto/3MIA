@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertController} from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,17 +8,21 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+    public alertController:AlertController
+  ) {}
 
-  produto=''
-  porcentagem=0
-  precoDesconto=''
-  precoTotal=0
+    valorEmprestimo = 0
+    jurosMensal = 0
+    meses = 0
+    valor = ''
+    mensal = ''
+    valorTotal = ''
 
-  calcularPorcentagem(){
-    this.precoDesconto = (parseFloat(this.produto) * (this.porcentagem/100)).toFixed(2)
-    this.precoTotal = parseFloat(this.produto) - parseFloat(this.precoDesconto)
-    return this.precoTotal.toFixed(2)
+  calcularEmprestimo(){
+    this.valor = (this.valorEmprestimo * (this.jurosMensal/100) * this.meses).toFixed(2)
+    this.valorTotal = ((this.jurosMensal * this.meses) + this.valorEmprestimo).toFixed(2)
+    this.mensal = (parseFloat(this.valorTotal)/this.meses).toFixed(2)
   }
 
 }
