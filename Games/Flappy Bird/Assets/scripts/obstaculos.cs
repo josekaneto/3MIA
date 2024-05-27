@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,15 @@ using UnityEngine;
 public class obstaculos : MonoBehaviour
 {
     [SerializeField]
-    private float velocidade = 0.6f;
+    private float velocidade;
+
+    [SerializeField]
+    private float variacaoPosicaoY;
+
+    private void Awake()
+    {
+        this.transform.Translate(Vector3.up * Random.Range(-variacaoPosicaoY, variacaoPosicaoY));
+    }
 
     // Update is called once per frame
     void Update()
@@ -13,4 +22,6 @@ public class obstaculos : MonoBehaviour
         this.transform.Translate(Vector3.left * this.velocidade * Time.deltaTime);
 
     }
+
+    
 }

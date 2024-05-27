@@ -10,7 +10,6 @@ public class GeradorDeObstaculos : MonoBehaviour
 
     [SerializeField]
     private float tempoParaGerar;
-
     private float cronometro;
 
     [SerializeField]
@@ -28,7 +27,7 @@ public class GeradorDeObstaculos : MonoBehaviour
         if(this.cronometro < 0)
         {
             GameObject.Instantiate(this.modeloObstaculo, this.transform.position, Quaternion.identity);
-            this .cronometro = this.tempoParaGerar;   
+            this.cronometro = this.tempoParaGerar;   
         }   
     } 
 }

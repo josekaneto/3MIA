@@ -20,6 +20,7 @@ public class passaro : MonoBehaviour
         }
     }
 
+    [SerializeField]
     private float velocidade = 3;
 
     void Impulsionar()
