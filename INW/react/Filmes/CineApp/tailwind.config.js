@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary-thompsom': '#034562'
+        'primary-kaneto': '#033325',
+        'secondary-kaneto': '#64756A',
+        'titulo-kaneto': '#5FAA95'
       }
     },
   },
