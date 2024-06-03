@@ -12,8 +12,9 @@ public class passaro : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+     private void Update()
     {
+  
         if (Input.GetMouseButtonDown(0))
         {
             this.Impulsionar();
