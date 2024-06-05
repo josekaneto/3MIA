@@ -11,7 +11,7 @@ function Home() {
                     <div className="card bg-black text-white m-5 flex flex-col justify-around rounded-2xl" key={index} >
                         <h1 className="text-3xl text-center my-5 text-titulo-kaneto"  key={filme.title}>{filme.title}</h1>
                         <img className="w-full" src={filme.image} alt="" />
-                        <div className="tags m-4" >
+                        <div className="tags m-1 flex justify-center" >
                         {
                             filme.tags.map( tag => (
                                 <span className="bg-primary-kaneto text-secondary-kaneto p-1 m-1 rounded" key={tag}>{tag}</span>
