@@ -5,10 +5,12 @@ using UnityEngine;
 public class passaro : MonoBehaviour
 {
     Rigidbody2D fisica;
+    private Diretor diretor;
 
     private void Awake()
     {
         this.fisica = GetComponent<Rigidbody2D>();
+        this.diretor = FindObjectOfType<Diretor>();
     }
 
     // Update is called once per frame
@@ -26,7 +28,14 @@ public class passaro : MonoBehaviour
 
     void Impulsionar()
     {
+        this.fisica.velocity = Vector2.zero;    
         this.fisica.AddForce(Vector2.up * this.velocidade, ForceMode2D.Impulse);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        this.fisica.simulated = false;
+        this.diretor.FinalizarJogo();
     }
 
 

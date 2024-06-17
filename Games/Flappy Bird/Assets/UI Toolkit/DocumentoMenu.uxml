@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); height: 415px; width: 251px;">
+        <ui:Button display-tooltip-when-elided="true" name="botao" style="height: 380px; width: 200px; background-image: url(&apos;project://database/Assets/sprites/message.png?fileID=2800000&amp;guid=1c4a187c0849eb346bb95817d5e3bac5&amp;type=3#message&apos;); background-color: rgba(56, 56, 56, 0); overflow: hidden; display: flex; visibility: visible; align-self: center; justify-content: center; align-items: center; margin-top: 30%; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+    </ui:VisualElement>
+</ui:UXML>
