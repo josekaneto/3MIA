@@ -16,12 +16,12 @@ export class HomePage {
   dezembro=0;
   media=0;
   nota='';
-  frutas=''
+  frutas='';
 
 
   mostrarCulturas(){
     this.media = (this.setembro + this.outubro + this.novembro + this.dezembro)/4
-    
+
     if(this.media >= 10 && this.media <= 15){
       this.frutas = ["Kiwi", "Framboesa", "Cereja", "Amora", "Blueberry", "Groselha", "Cranberry", "Avelã"].toString()
       this.nota = `Se a media de temperatura dos meses for ${this.media.toFixed(0)}°C, dará para plantar essas frutas:`
@@ -35,7 +35,7 @@ export class HomePage {
       this.nota = `Se a media de temperatura dos meses for ${this.media.toFixed(0)}°C, dará para plantar essas frutas:`
     }
     else if(this.media > 31){
-      this.nota = `Não existem frutas que possam ser plantadas com ${this.media.toFixed(0)}°C`
+      this.nota = `Não existem frutas que possam ser plantadas com a temperatura media de: ${this.media.toFixed(0)}°C`
       this.frutas = '';
     }
 
