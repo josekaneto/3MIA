@@ -10,9 +10,11 @@ export class ListaCulturasPage implements OnInit {
 
   constructor(private ActivatedRoute:ActivatedRoute) { }
 
+  nota:any;
   frutas:any;
 
   ngOnInit() {
+    this.nota = this.ActivatedRoute.snapshot.paramMap.get('nota')
     this.frutas = this.ActivatedRoute.snapshot.paramMap.get('frutas')
   }
 

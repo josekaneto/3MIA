@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'lista-culturas/:frutas',
+    path: 'lista-culturas/:nota/:frutas',
     loadChildren: () => import('./lista-culturas/lista-culturas.module').then( m => m.ListaCulturasPageModule)
   },
 ];
