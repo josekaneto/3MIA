@@ -1,13 +1,12 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
     return (
         <nav className="flex items-center">
-            <ul className="flex gap-3">
-                <li><Link className="text-lg " to="/">Home</Link></li>
-                <li><Link className="text-lg " to="filmes">Filmes</Link></li>
-                <li><Link className="text-lg " to="sobre">Sobre</Link></li>
-                <li><Link className="text-lg" to="contato">Contato</Link></li>
+            <ul className="flex gap-5">
+                <li><NavLink className="text-2xl font-font-header hover:text-hover-color" to="/">Home</NavLink></li>
+                <li><NavLink className="text-2xl font-font-header hover:text-hover-color" to="filmes">Filmes</NavLink></li>
+                <li><NavLink className="text-2xl font-font-header hover:text-hover-color" to="contato">Contato</NavLink></li>
             </ul>
         </nav>
     );
