@@ -4,3 +4,105 @@
 .active{
     text-decoration: underline;
 }
+
+.contato{
+    width: 50%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.contato-titulo {
+    width: 70%;
+}
+
+.contato-titulo h1{
+    font-size: 60px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.contato-img{
+    margin-top: 10%;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-contato{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nome{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-label-nome{
+    font-size: 28px;
+    color: #333333;
+    text-align: start;
+}
+
+.form-input-nome{
+    width: 70%;
+    border-radius: 100px;
+    border: 2px #E4E4E4 solid;
+}
+
+.email{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-label-email{
+    font-size: 28px;
+    color: #333333;
+}
+
+.form-input-email{
+    width: 70%;
+    border-radius: 100px;
+    border: 2px #E4E4E4 solid;
+}
+
+.textarea{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form-label-textarea{
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.form-textarea{
+    border: 2px #E4E4E4 solid;
+    border-radius: 30px;
+}
+
+.contato-botao{
+    padding: 10px 10%;
+    border-radius: 6px;
+    background-color: #6975E8;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin: 5% 0 0 55%;
+}
+
+hr{
+    height: 520px;
+}
