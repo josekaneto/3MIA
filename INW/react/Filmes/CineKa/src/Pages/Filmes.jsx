@@ -54,14 +54,14 @@ function Filmes() {
 
             <div className="p-6 mt-5">
                 <h2 className="text-white text-4xl mb-5 font-font-sub" >Em destaque</h2>
-                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                <div className="listaFilmes gap-10 flex overflow-x-scroll [&>div]:flex-shrink-0">
                     {
                         filmes.map(
                             filme =>(
                                 <>
                                 
-                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
-                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px] relative">
+                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl ">
                                             <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
                                         </Link>
                                         <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
@@ -79,13 +79,13 @@ function Filmes() {
 
             <div className="p-6 mt-5">
                 <h2 className="text-white text-4xl mb-5 font-font-sub" >Comédia</h2>
-                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                <div className="listaFilmes  gap-10 flex overflow-x-scroll [&>div]:flex-shrink-0 ">
                     {
                         filmes.map(
                             filme =>(
                                 <>
                                 
-                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
+                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px] relative ">
                                         <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
                                             <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
                                         </Link>
@@ -103,7 +103,7 @@ function Filmes() {
             </div>
             <div className="p-6 mt-5">
                 <h2 className="text-white text-4xl mb-5 font-font-sub" >Suspense</h2>
-                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                <div className="listaFilmes  gap-10 flex overflow-x-scroll [&>div]:flex-shrink-0">
                     {
                         filmes.map(
                             filme =>(
@@ -127,7 +127,7 @@ function Filmes() {
             </div>
             <div className="p-6 mt-5">
                 <h2 className="text-white text-4xl mb-5 font-font-sub" >Ação</h2>
-                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                <div className="listaFilmes  gap-10 flex overflow-x-scroll [&>div]:flex-shrink-0">
                     {
                         filmes.map(
                             filme =>(
@@ -151,7 +151,7 @@ function Filmes() {
             </div>
             <div className="p-6 mt-5">
                 <h2 className="text-white text-4xl mb-5 font-font-sub" >Ficção</h2>
-                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                <div className="listaFilmes  gap-10 flex overflow-x-scroll [&>div]:flex-shrink-0">
                     {
                         filmes.map(
                             filme =>(
@@ -175,7 +175,7 @@ function Filmes() {
             </div>
             <div className="p-6 mt-5">
                 <h2 className="text-white text-4xl mb-5 font-font-sub" >Terror</h2>
-                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                <div className="listaFilmes  gap-10 flex overflow-x-scroll [&>div]:flex-shrink-0">
                     {
                         filmes.map(
                             filme =>(
@@ -199,7 +199,7 @@ function Filmes() {
             </div>
             <div className="p-6 mt-5">
                 <h2 className="text-white text-4xl mb-5 font-font-sub" >Aventura</h2>
-                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                <div className="listaFilmes  gap-10 flex overflow-x-scroll [&>div]:flex-shrink-0">
                     {
                         filmes.map(
                             filme =>(
@@ -223,7 +223,7 @@ function Filmes() {
             </div>
             <div className="p-6 mt-5">
                 <h2 className="text-white text-4xl mb-5 font-font-sub" >Romance</h2>
-                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                <div className="listaFilmes  gap-10 flex overflow-x-scroll [&>div]:flex-shrink-0">
                     {
                         filmes.map(
                             filme =>(
