@@ -21,7 +21,7 @@ function Home() {
         
         <>
 
-        <Modal
+        <Modal 
           title={dataModal.title}
           open  = {showModal}
           footer={
@@ -32,7 +32,7 @@ function Home() {
           onCancel={closeDetail}
         >
             <img src={dataModal.image} />
-            <p> {dataModal.text} </p>
+            <p className="my-3"> {dataModal.text} </p>
         </Modal>
             <h2 className="font-font-sub font-black text-5xl text-white flex justify-center my-10">Cine News</h2>
             <div className="grid grid-cols-2">

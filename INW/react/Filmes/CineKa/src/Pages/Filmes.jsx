@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaArrowAltCircleDown } from "react-icons/fa";
 import { Carousel, Modal, Button } from 'antd';
 
 function Filmes() {
@@ -23,24 +22,232 @@ function Filmes() {
         .catch(error => console.log(error))
     })
 
-    const [dataModal, setDataModal] = useState({});
-    const [showModal, setShowModal] = useState(false);
+    const [aModal, setaModal] = useState({});
+    const [mostrarModal, setMostrarModal] = useState(false);
 
     const moreDetail = items => {
-        setShowModal(true);
-        setDataModal(items);
+        setMostrarModal(true);
+        setaModal(items);
       };
     
       const closeDetail = () => {
-        setShowModal(false);
+        setMostrarModal(false);
       };
 
     return (
         <>
 
+             <Carousel arrows infinite={false}>
+             {
+                    slides.map(
+                        slide => (
+                                <>
+                                <h2 className="text-4xl text-titulo-kaneto text-center mb-4">{slide.title}</h2>
+                                <div className="flex justify-center mb-6">
+                                    <img className="" src={`https://image.tmdb.org/t/p/w1280/${slide.backdrop_path}`} alt="" />
+                                </div>
+                                </>
+                        ) 
+                    )
+            }
+            </Carousel>  
+
+            <div className="p-6 mt-5">
+                <h2 className="text-white text-4xl mb-5 font-font-sub" >Em destaque</h2>
+                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                    {
+                        filmes.map(
+                            filme =>(
+                                <>
+                                
+                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
+                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                            <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                        </Link>
+                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
+                                        <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
+                                    </div>
+                                
+                                </>
+                                
+                                
+                            )
+                        )
+                    }
+                </div>
+            </div>
+
+            <div className="p-6 mt-5">
+                <h2 className="text-white text-4xl mb-5 font-font-sub" >Comédia</h2>
+                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                    {
+                        filmes.map(
+                            filme =>(
+                                <>
+                                
+                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
+                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                            <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                        </Link>
+                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
+                                        <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
+                                    </div>
+                                
+                                </>
+                                
+                                
+                            )
+                        )
+                    }
+                </div>
+            </div>
+            <div className="p-6 mt-5">
+                <h2 className="text-white text-4xl mb-5 font-font-sub" >Suspense</h2>
+                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                    {
+                        filmes.map(
+                            filme =>(
+                                <>
+                                
+                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
+                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                            <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                        </Link>
+                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
+                                        <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
+                                    </div>
+                                
+                                </>
+                                
+                                
+                            )
+                        )
+                    }
+                </div>
+            </div>
+            <div className="p-6 mt-5">
+                <h2 className="text-white text-4xl mb-5 font-font-sub" >Ação</h2>
+                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                    {
+                        filmes.map(
+                            filme =>(
+                                <>
+                                
+                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
+                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                            <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                        </Link>
+                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
+                                        <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
+                                    </div>
+                                
+                                </>
+                                
+                                
+                            )
+                        )
+                    }
+                </div>
+            </div>
+            <div className="p-6 mt-5">
+                <h2 className="text-white text-4xl mb-5 font-font-sub" >Ficção</h2>
+                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                    {
+                        filmes.map(
+                            filme =>(
+                                <>
+                                
+                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
+                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                            <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                        </Link>
+                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
+                                        <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
+                                    </div>
+                                
+                                </>
+                                
+                                
+                            )
+                        )
+                    }
+                </div>
+            </div>
+            <div className="p-6 mt-5">
+                <h2 className="text-white text-4xl mb-5 font-font-sub" >Terror</h2>
+                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                    {
+                        filmes.map(
+                            filme =>(
+                                <>
+                                
+                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
+                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                            <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                        </Link>
+                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
+                                        <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
+                                    </div>
+                                
+                                </>
+                                
+                                
+                            )
+                        )
+                    }
+                </div>
+            </div>
+            <div className="p-6 mt-5">
+                <h2 className="text-white text-4xl mb-5 font-font-sub" >Aventura</h2>
+                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                    {
+                        filmes.map(
+                            filme =>(
+                                <>
+                                
+                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
+                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                            <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                        </Link>
+                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
+                                        <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
+                                    </div>
+                                
+                                </>
+                                
+                                
+                            )
+                        )
+                    }
+                </div>
+            </div>
+            <div className="p-6 mt-5">
+                <h2 className="text-white text-4xl mb-5 font-font-sub" >Romance</h2>
+                <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+                    {
+                        filmes.map(
+                            filme =>(
+                                <>
+                                
+                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
+                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                            <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                        </Link>
+                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
+                                        <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
+                                    </div>
+                                
+                                </>
+                                
+                                
+                            )
+                        )
+                    }
+                </div>
+            </div>
         <Modal
-          title={dataModal.title}
-          open  = {showModal}
+          title={aModal.title}
+          open  = {mostrarModal}
           footer={
             <Button  onClick={closeDetail} className="bg-primary-kaneto text-white hover:bg-none hover:border-primary-kaneto">
               Ok
@@ -48,44 +255,11 @@ function Filmes() {
           }
           onCancel={closeDetail}
         >
-            <img src={dataModal.image} />
-            <p> {dataModal.text} </p>
+            <img className=" w-full" src={`https://image.tmdb.org/t/p/w154/${aModal.backdrop_path}`}/>
+            <p className="my-3">{aModal.overview}</p>
+            <p>Data de lançamento: {aModal.release_date}</p>
+            <p>Avaliação: {aModal.vote_average}</p>
         </Modal>
-
-            {/* <Carousel arrows infinite={false}>
-                {
-                    slides.map(
-                        slide => (
-                                <>
-                                    <img src={`https://image.tmdb.org/t/p/w154/${slide.backdrop_path}`} alt="" />
-                                </>
-                        ) 
-                    )
-                }
-            </Carousel>  */}
-
-
-        <h2 className="text-white text-4xl mb-5 font-font-sub" >Em destaque</h2>
-            <div className="listaFilmes flex flex-row gap-3 flex-wrap">
-                {
-                    filmes.map(
-                        filme =>(
-                            <>
-                            <Carousel arrows infinite={false} className="text-black">
-                                <div key={filme.id} className="card-filme bg-white text-black rounded-xl w-[150px]">
-                                    <h1 className="text-lg text-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
-                                    <img className="" src={`https://image.tmdb.org/t/p/w154/${filme.poster_path}`} alt="" />
-                                    <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl"><FaArrowAltCircleDown/></Link>
-                                </div>
-                            </Carousel>  
-                              </>
-                              
-                            
-                        )
-                    )
-                }
-                
-            </div>
         </>
     );
     
