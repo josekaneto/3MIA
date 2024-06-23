@@ -60,12 +60,12 @@ function Filmes() {
                             filme =>(
                                 <>
                                 
-                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px] relative">
-                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl ">
+                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px] relative h-4/6">
+                                        <Link onClick={()=> moreDetail(filme)} className="">
                                             <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                            <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
                                         </Link>
-                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
-                                        <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
+                                        <Link to="/favoritos" className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
                                     </div>
                                 
                                 </>
@@ -85,11 +85,11 @@ function Filmes() {
                             filme =>(
                                 <>
                                 
-                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px] relative ">
-                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px] relative h-4/6">
+                                        <Link onClick={()=> moreDetail(filme)} className="">
                                             <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                            <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
                                         </Link>
-                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
                                         <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
                                     </div>
                                 
@@ -109,11 +109,11 @@ function Filmes() {
                             filme =>(
                                 <>
                                 
-                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
-                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px] relative h-4/6">
+                                        <Link onClick={()=> moreDetail(filme)} className="">
                                             <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                            <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
                                         </Link>
-                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
                                         <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
                                     </div>
                                 
@@ -133,11 +133,11 @@ function Filmes() {
                             filme =>(
                                 <>
                                 
-                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
-                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px] relative h-4/6">
+                                        <Link onClick={()=> moreDetail(filme)} className="">
                                             <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                            <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
                                         </Link>
-                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
                                         <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
                                     </div>
                                 
@@ -157,11 +157,11 @@ function Filmes() {
                             filme =>(
                                 <>
                                 
-                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
-                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px] relative h-4/6">
+                                        <Link onClick={()=> moreDetail(filme)} className="">
                                             <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                            <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
                                         </Link>
-                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
                                         <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
                                     </div>
                                 
@@ -181,11 +181,11 @@ function Filmes() {
                             filme =>(
                                 <>
                                 
-                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
-                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px] relative h-4/6">
+                                        <Link onClick={()=> moreDetail(filme)} className="">
                                             <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                            <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
                                         </Link>
-                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
                                         <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
                                     </div>
                                 
@@ -205,11 +205,11 @@ function Filmes() {
                             filme =>(
                                 <>
                                 
-                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
-                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px] relative h-4/6">
+                                        <Link onClick={()=> moreDetail(filme)} className="">
                                             <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                            <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
                                         </Link>
-                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
                                         <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
                                     </div>
                                 
@@ -229,11 +229,11 @@ function Filmes() {
                             filme =>(
                                 <>
                                 
-                                    <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px]  relative">
-                                        <Link onClick={()=> moreDetail(filme)} className="bg-primary-kaneto text-secondary-kaneto text-xl">
+                                <div key={filme.id} className="flex flex-col bg-primary-kaneto text-black rounded-xl w-[200px] relative h-4/6">
+                                        <Link onClick={()=> moreDetail(filme)} className="">
                                             <img className="h-full" src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt="" />
+                                            <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
                                         </Link>
-                                        <h1 className=" text-xl text-center p-1 items-center text-titulo-kaneto" key={filmes}>{filme.title}</h1>
                                         <Link className=" right-0 absolute"><img className="w-8 p-1" src="star.png" alt="" /></Link>
                                     </div>
                                 
