@@ -6,7 +6,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" >
+  <div id="container">
   <ion-item>
     <ion-label>
       Escolha as temperaturas dos últimos quatro meses do ano:
@@ -17,31 +18,43 @@
     <ion-label>Mês de Setembro:</ion-label>
   </ion-item>
   <ion-item>
-    <ion-range min="-30" max="40" aria-label="Range with pin" [pin]="true" label="{{setembro}}°C" [(ngModel)]="setembro"></ion-range>
+    <ion-range min="-30" max="40" aria-label="Range with pin" [pin]="true" [(ngModel)]="setembro"></ion-range>
+    <ion-label>{{setembro}}°C</ion-label>
   </ion-item>
+   
+  
 
   <ion-item>
     <ion-label>Mês de Outubro:</ion-label>
   </ion-item>
   <ion-item>
-    <ion-range min="-30" max="40" aria-label="Range with pin" [pin]="true" label="{{outubro}}°C" [(ngModel)]="outubro"></ion-range>
+    <ion-range min="-30" max="40" aria-label="Range with pin" [pin]="true"[(ngModel)]="outubro"></ion-range>
+    <ion-label>{{outubro}}°C</ion-label>
   </ion-item>
-
+    
+  
 
   <ion-item>
     <ion-label>Mês de Novembro:</ion-label>
   </ion-item>
-  <ion-item>
-    <ion-range min="-30"  max="40" aria-label="Range with pin" [pin]="true" label="{{novembro}}°C" [(ngModel)]="novembro"></ion-range>
+ <ion-item>
+  <ion-range min="-30"  max="40" aria-label="Range with pin" [pin]="true"  [(ngModel)]="novembro"></ion-range>
+    <ion-label>{{novembro}}°C</ion-label>
   </ion-item>
+    
+
 
   <ion-item>
     <ion-label>Mês de Dezembro:</ion-label>
   </ion-item>
   <ion-item>
-    <ion-range min="-30" max="40" aria-label="Range with pin" [pin]="true" label="{{dezembro}}°C" [(ngModel)]="dezembro"></ion-range>
+    <ion-range min="-30" max="40" aria-label="Range with pin" [pin]="true" [(ngModel)]="dezembro"></ion-range>
+    <ion-label>{{dezembro}}°C</ion-label>
   </ion-item>
+    
 
-  <ion-button (click)="mostrarCulturas()">Mostrar Culturas</ion-button>
+
+  <button (click)="mostrarCulturas()">Mostrar Culturas</button>
+</div>
 
 </ion-content>

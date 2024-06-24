@@ -6,6 +6,7 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  padding: 10%;
 }
 
 #container strong {
@@ -25,3 +26,27 @@
 #container a {
   text-decoration: none;
 }
+
+ion-range {
+  --bar-background: #000000;
+  --bar-background-active: #370042;
+  --bar-height: 8px;
+  --bar-border-radius: 8px;
+  --knob-background: #0d9e00;
+  --knob-size: 20px;
+  --pin-background: #00331a;
+  --pin-color: #fff;
+}
+
+ion-item{
+  text-align: center;
+}
+
+button{
+  background-color: #00331a;
+  color: white;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
