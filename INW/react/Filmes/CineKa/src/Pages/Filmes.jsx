@@ -7,7 +7,7 @@ function Filmes() {
     const [filmes, setFilmes] = useState([])
 
     useEffect( () =>{
-        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=7c572a9f5b3ba776080330d23bb76e1e`)
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=7c572a9f5b3ba776080330d23bb76e1e&language=pt-BR`)
         .then( response => response.json())
         .then(response => setFilmes(response.results))
         .catch(error => console.log(error))
@@ -16,7 +16,7 @@ function Filmes() {
     const [slides, setSlides] = useState([])
 
     useEffect(() =>{
-        fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=7c572a9f5b3ba776080330d23bb76e1e`)
+        fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=7c572a9f5b3ba776080330d23bb76e1e&language=pt-BR`)
         .then (Response => Response.json() )
         .then(response => setSlides(response.results))
         .catch(error => console.log(error))
@@ -255,7 +255,7 @@ function Filmes() {
           }
           onCancel={closeDetail}
         >
-            <img className=" w-full" src={`https://image.tmdb.org/t/p/w154/${aModal.backdrop_path}`}/>
+            <img className=" w-full" src={`https://image.tmdb.org/t/p/original/${aModal.backdrop_path}`}/>
             <p className="my-3">{aModal.overview}</p>
             <p>Data de lançamento: {aModal.release_date}</p>
             <p>Avaliação: {aModal.vote_average}</p>
