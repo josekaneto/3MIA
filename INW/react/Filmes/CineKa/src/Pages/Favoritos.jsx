@@ -62,7 +62,7 @@ function Favoritos() {
                 }
                 onCancel={closeDetail}
             >
-                <img className=" w-full" src={`https://image.tmdb.org/t/p/w154/${aModal.backdrop_path}`} />
+                <img className=" w-full" src={`https://image.tmdb.org/t/p/original/${aModal.backdrop_path}`} />
                 <p className="my-3">{aModal.overview}</p>
                 <p>Data de lançamento: {aModal.release_date}</p>
                 <p>Avaliação: {aModal.vote_average}</p>

@@ -22,7 +22,8 @@ function Contato() {
 
         emailjs.send("service_5v1p42q", "template_9rvcz2a",templateParms, "Rkmh0Mj2yBUfq8CCY")
         .then((Response) => {
-            console.log("EMAIL ENVIADO", Response.status, Response.text)
+            alert("EMAIL ENVIADO")
+            console.log(Response.status, Response.text)
             setName('')
             setEmail('')
             setMensagem('')
