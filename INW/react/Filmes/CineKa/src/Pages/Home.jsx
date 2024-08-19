@@ -57,15 +57,15 @@ function Home() {
             <p className="my-3"> {dataModal.text} </p>
         </Modal>
 
-        <form className="flex justify-center relative" action="">
-            <label htmlFor="search"><img className="w-7 absolute top-0.5 ml-3" src="image.png" alt="" /></label>
+        <form className="flex justify-center relative pt-7">
+            <label htmlFor="search"><img className="w-7 absolute top-1/2 ml-2" src="image.png" alt="" /></label>
             <input
                 type="search" 
                 name="search" 
                 id="search" 
                 value={searchInput}
                 onChange={handleInputChange}
-                className="ps-11 pe-3 py-1 w-2/5 rounded-full "
+                className="ps-11 pe-3 py-1 w-2/5 rounded-full bg-secondary-kaneto focus:outline-none focus:border-2 focus:border-primary-kaneto hover:border-2 hover:border-titulo-kaneto text-titulo-kaneto"
             />
         </form>
 
