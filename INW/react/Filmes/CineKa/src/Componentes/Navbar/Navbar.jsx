@@ -1,6 +1,11 @@
 import { NavLink } from "react-router-dom";
+import data from "../../../artigos.json"
 
 function Navbar() {
+
+
+
+
     return (
         <nav className="flex items-center">
             <ul className="flex gap-5">

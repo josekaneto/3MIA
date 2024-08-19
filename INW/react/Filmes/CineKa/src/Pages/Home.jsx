@@ -17,9 +17,31 @@ function Home() {
         setShowModal(false);
       };
 
+
+      
+        const[searchInput, setsearchInput] = useState('')
+        const[artigos, setartigos] = useState(data)
+        
+        const handleInputChange = e => {
+    
+            const searchTerm = e.target.value
+            setsearchInput(searchTerm)
+            
+            const resultados = data.filter ( (search) => (
+                search.title.toLowerCase().includes(searchTerm.toLowerCase())
+            ))
+            console.log(resultados)
+            
+            setartigos(resultados)
+        }
+    
+
+
+
     return (
         
         <>
+        
 
         <Modal 
           title={dataModal.title}
@@ -34,11 +56,27 @@ function Home() {
             <img src={dataModal.image} />
             <p className="my-3"> {dataModal.text} </p>
         </Modal>
+
+        <form className="flex justify-center relative" action="">
+            <label htmlFor="search"><img className="w-7 absolute top-0.5 ml-3" src="image.png" alt="" /></label>
+            <input
+                type="search" 
+                name="search" 
+                id="search" 
+                value={searchInput}
+                onChange={handleInputChange}
+                className="ps-11 pe-3 py-1 w-2/5 rounded-full "
+            />
+        </form>
+
+       
+
+
             <h2 className="font-font-sub font-black text-5xl text-white flex justify-center my-10">Cine News</h2>
             <div className="grid grid-cols-2">
-            {
-                data.map(
-                    (filme, index) => (
+            { artigos.length > 0 ? 
+                artigos.map(
+                    (filme, index)  => (
                         <>
                         <div className="card bg-card text-white m-3 flex rounded-2xl h-[95%]" key={index} >
                             <div className=" w-2/4 bg-cover rounded-l-2xl" style={{backgroundImage: `url(${filme.image})`}}></div>
@@ -66,7 +104,10 @@ function Home() {
                         </>
                     )
                     )
+                    : 
+                    <p className="text-white flex items-center justify-center">Artigo não encontrado 😓</p>
                 }
+                
             </div>
         </>
     );
