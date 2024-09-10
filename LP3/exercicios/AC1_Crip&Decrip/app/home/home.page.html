@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+    <ion-item>
+      <ion-input label="Nome" labelPlacement="floating" placeholder="Enter text" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Email" labelPlacement="floating" placeholder="Enter text"  [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Nota" labelPlacement="floating" placeholder="Enter text" [(ngModel)]="nota"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="chaveSecreta" labelPlacement="floating" placeholder="Enter text"  [(ngModel)]="chaveSecreta"></ion-input>
+    </ion-item>
+
+
+
+    <ion-button (click)="Criptografar()">Criptografar</ion-button>
+
+
+</ion-content>
