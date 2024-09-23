@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-input [(ngModel)]="cep" type="text" label="Digite o CEP" labelPlacement="floating" maxlength="8"></ion-input>
+  </ion-item>
+
+  <p>Logradouro: {{ logradouro }}</p>
+  <p>Bairro: {{ bairro }}</p>
+  <p>Cidade: {{ localidade }}</p>
+  <p>Estado: {{ uf }}</p> 
+  <p>DDD: {{ ddd }}</p>
+  
+
+  <ion-button  (click)="buscarCep()">Buscar Dados</ion-button> 
+
+
+
+  <ion-item>
+    <ion-input [(ngModel)]="uf2" type="text" label="Digite a UF" labelPlacement="floating"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="localidade2" type="text" label="Digite a Cidade" labelPlacement="floating"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="logradouro2" type="text" label="Digite a Rua" labelPlacement="floating"></ion-input>
+  </ion-item>
+  <ion-button (click)="buscarCep2()">Buscar CEP</ion-button>
+
+
+    <p>CEP : {{ cep2 }}</p>
+    <p>Bairro: {{ bairro2 }}</p>
+    <p>DDD: {{ddd2}}</p>
+
+</ion-content>
