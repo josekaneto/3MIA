@@ -14,6 +14,7 @@ export class HomePage {
   localidade: string = '';
   uf: string = '';
   ddd: string = ''
+  lista:any;
 
 
   cep2: string = '';
@@ -52,12 +53,7 @@ export class HomePage {
     const url2 = `https://viacep.com.br/ws/${this.uf2}/${this.localidade2}/${this.logradouro2}/json/`;
     if(this.uf2 !== '' && this.localidade2 !== '' && this.logradouro2 !== ''){
     this.http.get(url2).subscribe((data: any) => {
-      this.cep2 = data[0].cep;
-      this.logradouro2 = data[0].logradouro;
-      this.bairro2 = data[0].bairro;
-      this.localidade2 = data[0].localidade;
-      this.uf2 = data[0].uf;
-      this.ddd2 = data[0].ddd
+      this.lista = data
     },
     (erro) => {
       console.error('Erro ao procurar pelo endereço:', erro);

@@ -13,13 +13,13 @@
   </ion-item>
 
   <p>Logradouro: {{ logradouro }}</p>
-  <p>Bairro: {{ bairro }}</p>
+  <p>Bairro: {{ bairro }}</p>'''''''''''qqqqqqqqqqqqqszzzzzzzzzzzzzzz'qqqqqqqqqqqqqqqqqqqqz2s'
   <p>Cidade: {{ localidade }}</p>
-  <p>Estado: {{ uf }}</p> 
+  <p>Estado: {{ uf }}</p>
   <p>DDD: {{ ddd }}</p>
-  
 
-  <ion-button  (click)="buscarCep()">Buscar Dados</ion-button> 
+
+  <ion-button  (click)="buscarCep()">Buscar Dados</ion-button>
 
 
 
@@ -34,9 +34,10 @@
   </ion-item>
   <ion-button (click)="buscarCep2()">Buscar CEP</ion-button>
 
-
-    <p>CEP : {{ cep2 }}</p>
-    <p>Bairro: {{ bairro2 }}</p>
-    <p>DDD: {{ddd2}}</p>
+    <ion-card *ngFor="let dados of lista">
+      <p>Endereço: {{dados.logradouro}}</p>
+      <p>CEP : {{ dados.cep }}</p>
+      <p>Bairro: {{ dados.bairro }}</p>
+    </ion-card>
 
 </ion-content>
