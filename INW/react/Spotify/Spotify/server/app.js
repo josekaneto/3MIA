@@ -1,6 +1,7 @@
 import express from 'express'
 import conectDb from './db.js'
 import cors from 'cors'
+import lixo from './Models/Artista.js'
 
 const app = express()
 app.use(cors())
@@ -12,6 +13,11 @@ conexao.on('error', (erro) => {
 
 conexao.once('open', ()=>{
     console.log("Conectado ao MongoDB")
+})
+
+ app.get("/artistas", async (req, res) =>{
+    const listaArtistas = await lixo.find({})
+    res.status(200).json(listaArtistas)
 })
 
 app.listen(3000, () => {
