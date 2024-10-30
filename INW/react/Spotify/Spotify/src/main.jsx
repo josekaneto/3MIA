@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     path: '/', element:<App/>,
    children: [
     {index:true, element:<ConteudoPrincipal/>},
-    {path: "/artista/:id", element:<DetalhesArtista/>}
+    {path: "/artistas/:id", element:<DetalhesArtista/>}
    ]
   }
 ])

@@ -1,6 +1,6 @@
 function Aside({ children }) {
     return ( 
-    <aside className='bg-cyan-400 w-1/4 h-full flex flex-col justify-around items-center'>
+    <aside className='bg-neutral-800 mt-8 -mb-10 rounded-3xl w-1/4 min-h-screen flex flex-col justify-around items-center'>
         {children}
     </aside>
      );

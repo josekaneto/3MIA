@@ -1,6 +1,6 @@
 function Header() {
     return ( 
-        <header className='bg-pink-700 w-full h-28'></header>
+        <header className='bg-neutral-800 w-full h-32 rounded-b-xl'></header>
     );
 }
 

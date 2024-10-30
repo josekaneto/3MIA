@@ -13,11 +13,7 @@ function App() {
     <>
       <Header />
       <Container>
-        <Aside>
-          <CardAside />
-          <CardAside />
-          <CardAside />
-        </Aside>
+        <Aside/>
           <Outlet/>
       </Container>
     </>
