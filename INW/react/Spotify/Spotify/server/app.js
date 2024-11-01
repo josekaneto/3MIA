@@ -14,6 +14,7 @@ app.use(cors(
 
 app.get('/', (req, res) => {
     res.send('Olá API!');
+    console.log('API rodando na porta 3000');
 });
 
 const conexao = await conectaNaDb();
