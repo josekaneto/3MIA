@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CardArtista from "../CardArtista/CardArtista";
+import { FaSearch } from "react-icons/fa";
 
-function ConteudoPrincipal({cor}) {
+function ConteudoPrincipal() {
 
   const [artistas, setArtistas] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3000/artistas")
@@ -15,15 +15,17 @@ function ConteudoPrincipal({cor}) {
       .finally(() => console.log("Finalizou a requisição"));
   }, []);
 
-
   return (
-    <main className="flex flex-col w-4/4 h-screen justify-around p-7">
-            <CardArtista h1="Rap"/>
-            <CardArtista h1="Trap"/>
-            <CardArtista h1="Funk"/>
-            <CardArtista h1="Pop"/>
+
+    <main className="flex flex-col w-3/4 h-full justify-between pl-10">
+
+      <CardArtista h1="Rap" />
+      <CardArtista h1="Trap" />
+      <CardArtista h1="Funk" />
+      <CardArtista h1="Pop" />
     </main>
   );
 }
 
 export default ConteudoPrincipal;
+

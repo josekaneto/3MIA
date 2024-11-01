@@ -4,7 +4,12 @@ import cors from 'cors';
 import artista from './Models/Artista.js';
 
 const app = express();
-app.use(cors());
+app.use(cors(
+    {
+        origin: "*",
+        credentials: true
+    }
+), express.json())
 const conexao = await conectaNaDb();
  
 conexao.on('error', (erro) =>{
@@ -25,6 +30,10 @@ app.get("/artistas/:id", async (req, res) => {
     const artistas = await artista.findById(req.params.id);
     res.status(200).json(artistas)
 })
+
+app.get('/', (req, res) => {
+    res.send('Olá API!');
+});
  
 app.listen(3000, ()=> {
     console.log('Servidor Conectado')
