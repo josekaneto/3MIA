@@ -9,7 +9,7 @@ export default function DetalhesArtista() {
     const [artista, setArtistas] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:3000/artistas/${id}`)
+        fetch(`https://3-mia-ten.vercel.app/artistas/${id}`)
             .then((res) => res.json())
             .then((data) => setArtistas(data))
             .catch((err) => console.log(err))
