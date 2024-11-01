@@ -7,7 +7,7 @@ export default function CardArtista({h1}){
     const [artistas, setArtistas] = useState([]);
 
     useEffect(() => {
-        fetch("https://3-mia-ubrx.vercel.app/artistas")
+        fetch("https://spotify-back-six.vercel.app/artistas")
           .then((res) => res.json())
           .then((data) => setArtistas(data))
           .catch((err) => console.log(err))
