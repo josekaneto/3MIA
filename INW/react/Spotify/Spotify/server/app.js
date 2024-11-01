@@ -10,6 +10,7 @@ app.use(cors(
         credentials: true
     }
 ), express.json())
+
 const conexao = await conectaNaDb();
  
 conexao.on('error', (erro) =>{
